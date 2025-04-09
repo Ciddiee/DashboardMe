@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Dashboard</title>
+  <link rel="stylesheet" href="spotify.css" />
+</head>
+<body>
+
+  <!-- NAVIGATIONSBAR -->
+  <nav class="navbar">
+    <!-- LEFT SECTION: Profile and Links -->
+    <div class="nav-left">
+      <div class="dropdown">
+        <a href="#" class="nav-link">Hours</a>
+        <div class="dropdown-content">
+          <div class="card hours">
+            <h2>Hours This Week</h2>
+            <canvas id="listeningChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="nav-link">Top Artist</a>
+        <div class="dropdown-content">
+          <div class="card top-artists">
+            <h2>Top Artists This Month</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER SECTION: Profile Card -->
+    <div class="nav-center">
+      <div id="user-info" class="profile-card" style="display: none;">
+        <img id="user-image" src="" alt="Profile Picture">
+        <p id="user-name"></p>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION: Links + Log Out Button -->
+    <div class="nav-right">
+      <div class="dropdown">
+        <a href="#" class="nav-link">Top Songs</a>
+        <div class="dropdown-content">
+          <div class="card top-songs">
+            <h2>Top Songs This Month</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" class="nav-link">Top Genre</a>
+        <div class="dropdown-content">
+          <div class="card top-genre">
+            <h2>Top Genre</h2>
+            <canvas id="genreChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <button id="logout-btn" class="logout-btn">Log out</button>
+    </div>
+  </nav>
+
+  <!-- Dashboard Section with 3 Cards in a Row -->
+  <div class="dashboard-grid">
+    <!-- Left Card: All Top Songs -->
+    <div class="dashboard-card all-card" id="all-top-songs">
+      <h2>All Top Songs</h2>
+      <div class="song-card-container" id="all-songs"></div>
+    </div>
+
+    <!-- Center Card: Today's Top 3 Songs -->
+    <div class="dashboard-card today-card">
+      <h2>Today's Top 3 Songs</h2>
+      <div class="song-card-container" id="today-top-songs"></div>
+    </div>
+
+    <!-- Right Card: Recently Played -->
+    <div class="dashboard-card recent-card" id="recent-songs">
+      <h2>Recently Played</h2>
+      <div class="song-card-container" id="recent-songs-container"></div>
+    </div>
+  </div>
+
+
+
+  <script src="spotify.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</body>
+</html>
