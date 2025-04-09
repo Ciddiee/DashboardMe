@@ -1,0 +1,65 @@
+/* Allmän stil för hela sidan */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Spotify mörkt tema */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login container */
+.login-container {
+    background-color: #181818;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: scale(1.05);
+}
+
+/* Rubriker */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+
+/* Login-knapp */
+#login-btn {
+    padding: 12px 20px;
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#login-btn:hover {
+    background-color: #1ed760;
+    transform: scale(1.1);
+}
+
+/* Responsiv anpassning */
+@media screen and (max-width: 600px) {
+    .login-container {
+        width: 80%;
+    }
+}
