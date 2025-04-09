@@ -325,7 +325,7 @@ function getTopGenre(accessToken) {
   window.onload = async function () {
     const accessToken = localStorage.getItem('access_token');
     if (!accessToken) {
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
       return;
     }
     
@@ -361,7 +361,7 @@ function getTopGenre(accessToken) {
     .catch(error => {
       console.error("Fel vid hämtning av användaruppgifter:", error);
       localStorage.removeItem('access_token');
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
     });
     
     // Hantera utloggning
@@ -369,7 +369,7 @@ function getTopGenre(accessToken) {
       localStorage.removeItem('access_token');
       localStorage.removeItem('refresh_token');
       localStorage.clear();
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
     });
   };
   
