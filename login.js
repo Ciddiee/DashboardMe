@@ -1,8 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const loginButton = document.getElementById('login-btn');
-  if (loginButton) {
-    loginButton.addEventListener('click', function() {
-      const clientId = '...';
+
 
 document.getElementById('login-btn').addEventListener('click', function () {
     const clientId = '0e003d9184eb4010a520086c26a4b9e7';
