@@ -129,7 +129,7 @@ body {
     min-width: 450px;        /* Ger extra utrymme */
     z-index: 200;
     max-height: 800px;
-    overflow-y: auto;        /* Gör innehållet scrollbart vid behov */
+    /* overflow-y: auto;        /* Gör innehållet scrollbart vid behov */ */
 }
 /* Visa dropdown vid hover/fokus */
 .dropdown:hover .dropdown-content,
